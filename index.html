@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Multimedia Whiteboard</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        #whiteboard {
+            border: 2px solid rgb(32, 1, 1);
+            width: 80%;
+            height: 800px;
+            margin: 20px auto;
+            position: relative;
+            background-color: #fff;
+        }
+        #toolbar {
+            text-align: center;
+            margin: 20px;
+        }
+        #videoSection {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .comment-section {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="toolbar">
+        <button onclick="clearBoard()">Clear Board</button>
+        <input type="file" accept="video/*" id="uploadVideo">
+        <button onclick="uploadVideo()">Upload Video</button>
+    </div>
+    <div id="whiteboard"></div>
+    <div id="videoSection"></div>
+    <script src="whiteboard.js"></script>
+</body>
+</html>
